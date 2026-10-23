@@ -61,7 +61,7 @@ export const ROLES: CareerRole[] = [
 const tierFactor: Record<CollegeTier, number> = { "Tier 1": 1.15, "Tier 2": 1, "Tier 3": 0.88, "Unclassified / Open": 0.85 };
 
 export function formatINR(n: number): string {
-  return "₹" + Math.round(n / 1000) * 1000 >= 0 ? `₹${(Math.round(n / 1000) * 1000).toLocaleString("en-IN")}` : "";
+  return `₹${(Math.round(n / 1000) * 1000).toLocaleString("en-IN")}`;
 }
 
 export function computeMatches(input: DiscoveryInput): CareerMatch[] {
