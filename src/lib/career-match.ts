@@ -46,16 +46,16 @@ export const ROUTES: TargetRoute[] = ["On-Campus Placements", "Off-Campus Drives
 const CS_DEGREES: Education[] = ["BTech/BE", "BCA", "MCA"];
 
 export const ROLES: CareerRole[] = [
-  { id: "sde", title: "Software Development Engineer", interests: ["Software Development"], requiresCS: true, friendlyDegrees: ["BTech/BE", "BCA", "MCA", "BSc"], freeLearnable: true, takeHome: [30000, 65000], offCampusFriendly: true },
-  { id: "frontend", title: "Frontend Developer", interests: ["Software Development", "Design / UI/UX"], requiresCS: false, friendlyDegrees: ["BTech/BE", "BCA", "MCA", "BSc"], freeLearnable: true, takeHome: [25000, 50000], offCampusFriendly: true },
+  { id: "backend-developer", title: "Software Development Engineer", interests: ["Software Development"], requiresCS: true, friendlyDegrees: ["BTech/BE", "BCA", "MCA", "BSc"], freeLearnable: true, takeHome: [30000, 65000], offCampusFriendly: true },
+  { id: "frontend-developer", title: "Frontend Developer", interests: ["Software Development", "Design / UI/UX"], requiresCS: false, friendlyDegrees: ["BTech/BE", "BCA", "MCA", "BSc"], freeLearnable: true, takeHome: [25000, 50000], offCampusFriendly: true },
   { id: "data-analyst", title: "Data Analyst", interests: ["Data & Analytics", "Finance & Commerce"], requiresCS: false, friendlyDegrees: ["BSc", "BCom", "BBA", "BCA", "BTech/BE", "MBA", "BA"], freeLearnable: true, takeHome: [25000, 45000], offCampusFriendly: true },
-  { id: "ml", title: "Machine Learning Engineer", interests: ["AI/ML", "Data & Analytics"], requiresCS: true, friendlyDegrees: ["BTech/BE", "MCA", "BSc"], freeLearnable: false, takeHome: [40000, 80000], offCampusFriendly: false },
-  { id: "devops", title: "Cloud / DevOps Associate", interests: ["Cloud & DevOps"], requiresCS: true, friendlyDegrees: ["BTech/BE", "BCA", "MCA", "BSc"], freeLearnable: false, takeHome: [28000, 55000], offCampusFriendly: true },
-  { id: "soc", title: "SOC Analyst (Cybersecurity)", interests: ["Cybersecurity"], requiresCS: false, friendlyDegrees: ["BTech/BE", "BCA", "BSc", "MCA"], freeLearnable: false, takeHome: [25000, 45000], offCampusFriendly: true },
-  { id: "qa", title: "QA / Automation Engineer", interests: ["QA & Automation", "Software Development"], requiresCS: false, friendlyDegrees: ["BTech/BE", "BCA", "BSc", "MCA", "BCom", "BA", "Other"], freeLearnable: true, takeHome: [22000, 40000], offCampusFriendly: true },
-  { id: "pm-ops", title: "Associate Product / Business Ops", interests: ["Product & Ops"], requiresCS: false, friendlyDegrees: ["MBA", "BBA", "BTech/BE", "BCom", "BA"], freeLearnable: true, takeHome: [30000, 60000], offCampusFriendly: false },
-  { id: "fin-analyst", title: "Financial Analyst", interests: ["Finance & Commerce", "Data & Analytics"], requiresCS: false, friendlyDegrees: ["BCom", "BBA", "MBA", "BA", "BSc"], freeLearnable: true, takeHome: [25000, 50000], offCampusFriendly: true },
-  { id: "uiux", title: "UI/UX Designer", interests: ["Design / UI/UX", "Product & Ops"], requiresCS: false, friendlyDegrees: EDUCATIONS, freeLearnable: true, takeHome: [22000, 45000], offCampusFriendly: true },
+  { id: "ml-engineer", title: "Machine Learning Engineer", interests: ["AI/ML", "Data & Analytics"], requiresCS: true, friendlyDegrees: ["BTech/BE", "MCA", "BSc"], freeLearnable: false, takeHome: [40000, 80000], offCampusFriendly: false },
+  { id: "devops-engineer", title: "Cloud / DevOps Associate", interests: ["Cloud & DevOps"], requiresCS: true, friendlyDegrees: ["BTech/BE", "BCA", "MCA", "BSc"], freeLearnable: false, takeHome: [28000, 55000], offCampusFriendly: true },
+  { id: "cybersecurity-analyst", title: "SOC Analyst (Cybersecurity)", interests: ["Cybersecurity"], requiresCS: false, friendlyDegrees: ["BTech/BE", "BCA", "BSc", "MCA"], freeLearnable: false, takeHome: [25000, 45000], offCampusFriendly: true },
+  { id: "qa-automation", title: "QA / Automation Engineer", interests: ["QA & Automation", "Software Development"], requiresCS: false, friendlyDegrees: ["BTech/BE", "BCA", "BSc", "MCA", "BCom", "BA", "Other"], freeLearnable: true, takeHome: [22000, 40000], offCampusFriendly: true },
+  { id: "product-ops", title: "Associate Product / Business Ops", interests: ["Product & Ops"], requiresCS: false, friendlyDegrees: ["MBA", "BBA", "BTech/BE", "BCom", "BA"], freeLearnable: true, takeHome: [30000, 60000], offCampusFriendly: false },
+  { id: "financial-analyst", title: "Financial Analyst", interests: ["Finance & Commerce", "Data & Analytics"], requiresCS: false, friendlyDegrees: ["BCom", "BBA", "MBA", "BA", "BSc"], freeLearnable: true, takeHome: [25000, 50000], offCampusFriendly: true },
+  { id: "uiux-designer", title: "UI/UX Designer", interests: ["Design / UI/UX", "Product & Ops"], requiresCS: false, friendlyDegrees: EDUCATIONS, freeLearnable: true, takeHome: [22000, 45000], offCampusFriendly: true },
 ];
 
 const tierFactor: Record<CollegeTier, number> = { "Tier 1": 1.15, "Tier 2": 1, "Tier 3": 0.88, "Unclassified / Open": 0.85 };
