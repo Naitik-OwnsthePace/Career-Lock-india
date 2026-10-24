@@ -11,6 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CareersRouteImport } from './routes/careers'
+import { Route as CtcSimulatorRouteImport } from './routes/ctc-simulator'
+import { Route as ExploreRouteImport } from './routes/explore'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as InsightsRouteImport } from './routes/insights'
+import { Route as RoadmapRouteImport } from './routes/roadmap'
+import { Route as RoiRouteImport } from './routes/roi'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +28,110 @@ const CareersRoute = CareersRouteImport.update({
   path: '/careers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CtcSimulatorRoute = CtcSimulatorRouteImport.update({
+  id: '/ctc-simulator',
+  path: '/ctc-simulator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExploreRoute = ExploreRouteImport.update({
+  id: '/explore',
+  path: '/explore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsRoute = InsightsRouteImport.update({
+  id: '/insights',
+  path: '/insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoadmapRoute = RoadmapRouteImport.update({
+  id: '/roadmap',
+  path: '/roadmap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoiRoute = RoiRouteImport.update({
+  id: '/roi',
+  path: '/roi',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/careers': typeof CareersRoute
+  '/ctc-simulator': typeof CtcSimulatorRoute
+  '/explore': typeof ExploreRoute
+  '/faq': typeof FaqRoute
+  '/insights': typeof InsightsRoute
+  '/roadmap': typeof RoadmapRoute
+  '/roi': typeof RoiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/careers': typeof CareersRoute
+  '/ctc-simulator': typeof CtcSimulatorRoute
+  '/explore': typeof ExploreRoute
+  '/faq': typeof FaqRoute
+  '/insights': typeof InsightsRoute
+  '/roadmap': typeof RoadmapRoute
+  '/roi': typeof RoiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/careers': typeof CareersRoute
+  '/ctc-simulator': typeof CtcSimulatorRoute
+  '/explore': typeof ExploreRoute
+  '/faq': typeof FaqRoute
+  '/insights': typeof InsightsRoute
+  '/roadmap': typeof RoadmapRoute
+  '/roi': typeof RoiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/careers'
+  fullPaths:
+    | '/'
+    | '/careers'
+    | '/ctc-simulator'
+    | '/explore'
+    | '/faq'
+    | '/insights'
+    | '/roadmap'
+    | '/roi'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/careers'
-  id: '__root__' | '/' | '/careers'
+  to:
+    | '/'
+    | '/careers'
+    | '/ctc-simulator'
+    | '/explore'
+    | '/faq'
+    | '/insights'
+    | '/roadmap'
+    | '/roi'
+  id:
+    | '__root__'
+    | '/'
+    | '/careers'
+    | '/ctc-simulator'
+    | '/explore'
+    | '/faq'
+    | '/insights'
+    | '/roadmap'
+    | '/roi'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CareersRoute: typeof CareersRoute
+  CtcSimulatorRoute: typeof CtcSimulatorRoute
+  ExploreRoute: typeof ExploreRoute
+  FaqRoute: typeof FaqRoute
+  InsightsRoute: typeof InsightsRoute
+  RoadmapRoute: typeof RoadmapRoute
+  RoiRoute: typeof RoiRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +150,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CareersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ctc-simulator': {
+      id: '/ctc-simulator'
+      path: '/ctc-simulator'
+      fullPath: '/ctc-simulator'
+      preLoaderRoute: typeof CtcSimulatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explore': {
+      id: '/explore'
+      path: '/explore'
+      fullPath: '/explore'
+      preLoaderRoute: typeof ExploreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights': {
+      id: '/insights'
+      path: '/insights'
+      fullPath: '/insights'
+      preLoaderRoute: typeof InsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roadmap': {
+      id: '/roadmap'
+      path: '/roadmap'
+      fullPath: '/roadmap'
+      preLoaderRoute: typeof RoadmapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roi': {
+      id: '/roi'
+      path: '/roi'
+      fullPath: '/roi'
+      preLoaderRoute: typeof RoiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CareersRoute: CareersRoute,
+  CtcSimulatorRoute: CtcSimulatorRoute,
+  ExploreRoute: ExploreRoute,
+  FaqRoute: FaqRoute,
+  InsightsRoute: InsightsRoute,
+  RoadmapRoute: RoadmapRoute,
+  RoiRoute: RoiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

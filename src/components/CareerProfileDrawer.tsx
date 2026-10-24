@@ -131,10 +131,13 @@ export function CareerProfileDrawer({ career, onClose }: { career: Career | unde
               </Section>
 
               <Section letter="F" title="Next step">
-                <button disabled className="mb-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-lime font-bold text-lime-foreground shadow-lime disabled:cursor-not-allowed disabled:opacity-80">
+                <a
+                  href="/#ctc"
+                  onClick={() => onClose()}
+                  className="mb-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-lime font-bold text-lime-foreground shadow-lime transition hover:brightness-95"
+                >
                   <Calculator className="h-4 w-4" /> Simulate CTC for this Role
-                  <span className="rounded-full bg-navy px-2 py-0.5 text-[10px] text-lime">Coming soon</span>
-                </button>
+                </a>
               </Section>
             </div>
           </>
